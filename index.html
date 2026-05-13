@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ambler Institute for Ethical AI</title>
+    <meta name="description" content="Moving organisations from AI principles to operational AI governance, certification, and advisory. A UK Community Interest Company.">
+    <meta property="og:title" content="The Ambler Institute for Ethical AI">
+    <meta property="og:description" content="Moving organisations from AI principles to operational AI governance, certification, and advisory.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theamblerinstitute.org">
+    <meta property="og:image" content="https://theamblerinstitute.org/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #1B4F72;
+            --primary-light: #2471A3;
+            --bg: #FAFBFC;
+            --text: #2C3E50;
+            --text-light: #5D6D7E;
+            --white: #FFFFFF;
+            --border: #D5DBDB;
+            --section-bg: #F0F3F5;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-mark {
+            flex-shrink: 0;
+        }
+
+        .logo-mark svg {
+            display: block;
+        }
+
+        .site-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        @media (max-width: 480px) {
+            .site-title {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 56px 0;
+        }
+
+        section.alt {
+            background: var(--section-bg);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Mission */
+        .mission-lead {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        .mission-detail {
+            color: var(--text-light);
+        }
+
+        /* Team */
+        .team-grid {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .advisory-note {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            padding-top: 4px;
+        }
+
+        /* Inaugural photo */
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-caption {
+            text-align: center;
+            padding: 12px 24px;
+            background: var(--white);
+            color: var(--text-light);
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Team with photos */
+        .team-member {
+            padding: 14px 18px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .team-photo {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .team-info strong {
+            color: var(--primary);
+        }
+
+        .team-info span {
+            display: block;
+            color: var(--text-light);
+            font-size: 0.92rem;
+            margin-top: 2px;
+        }
+
+        /* Form */
+        .register-form {
+            max-width: 480px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        label .optional {
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--text);
+            background: var(--white);
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(27, 79, 114, 0.12);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 4px;
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+
+        .checkbox-group label {
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        .btn-submit {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-light);
+        }
+
+        .btn-submit:focus-visible {
+            outline: 3px solid var(--primary-light);
+            outline-offset: 2px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.85);
+            padding: 32px 0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        footer a {
+            color: var(--white);
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 255, 255, 0.4);
+        }
+
+        footer a:hover {
+            text-decoration-color: var(--white);
+        }
+
+        .footer-contact {
+            margin-top: 8px;
+        }
+
+        /* Utility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-mark" aria-hidden="true">
+                <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ambler Institute logo">
+                    <rect width="44" height="44" rx="12" fill="#1B4F72"/>
+                    <text x="22" y="28" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="500">AI</text>
+                </svg>
+            </div>
+            <h1 class="site-title">The Ambler Institute for Ethical AI</h1>
+        </div>
+    </header>
+
+    <!-- Inaugural meeting at WCIT Hall, 11 May 2026 -->
+    <img src="inaugural-wcit.jpeg" alt="The inaugural meeting of The Ambler Institute at the Worshipful Company of Information Technologists, 11 May 2026" class="hero-image">
+    <p class="hero-caption">Inaugural meeting, Worshipful Company of Information Technologists, London, 11 May 2026</p>
+
+    <main>
+
+        <!-- Mission -->
+        <section id="mission">
+            <div class="container">
+                <h2>Our Mission</h2>
+                <p class="mission-lead">Moving organisations from AI principles to operational AI governance, certification, and advisory.</p>
+                <p class="mission-detail">Most organisations have an AI ethics statement. Very few have operational governance that holds up under scrutiny. No existing certification framework starts from the intersection of psychology, technology, and human behaviour. With the EU AI Act entering enforcement on 2 August 2026, the gap between good intentions and genuine compliance is about to become a material risk.</p>
+                <p class="mission-detail">The Ambler Institute exists to close that gap.</p>
+            </div>
+        </section>
+
+        <!-- Founding Team -->
+        <section id="team" class="alt">
+            <div class="container">
+                <h2>Founding Team</h2>
+                <div class="team-grid" role="list">
+                    <div class="team-member" role="listitem">
+                        <img src="chris-ambler.jpeg" alt="Chris Ambler" class="team-photo">
+                        <div class="team-info">
+                            <strong>Chris Ambler</strong>
+                            <span>Chief Executive Officer</span>
+                        </div>
+                    </div>
+                    <div class="team-member" role="listitem">
+                        <img src="julie-hendry.jpeg" alt="Julie Hendry" class="team-photo">
+                        <div class="team-info">
+                            <strong>Julie Hendry FBCS</strong>
+                            <span>Chief Operating Officer</span>
+                        </div>
+                    </div>
+                    <div class="team-member" role="listitem">
+                        <img src="rob-newcombe.jpeg" alt="Rob Newcombe" class="team-photo">
+                        <div class="team-info">
+                            <strong>Rob Newcombe FBCS</strong>
+                            <span>Chief Information and Product Officer</span>
+                        </div>
+                    </div>
+                    <div class="team-member" role="listitem">
+                        <img src="noel-phillips.jpeg" alt="Rev Dr Noel Phillips" class="team-photo">
+                        <div class="team-info">
+                            <strong>Rev Dr Noel Phillips</strong>
+                            <span>Chief People Officer</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="advisory-note">Advisory support from the Tortora Brayda Institute.</p>
+                <p class="advisory-note">Pro bono legal adviser: Ian Mitchell KC.</p>
+            </div>
+        </section>
+
+        <!-- Group photo -->
+        <section>
+            <div class="container" style="text-align: center;">
+                <img src="inaugural-group.jpeg" alt="Delegates at the inaugural meeting of The Ambler Institute, WCIT Hall, 11 May 2026" style="max-width: 100%; border-radius: 6px;">
+                <p class="advisory-note" style="margin-top: 12px;">Inaugural delegates, WCIT Hall, London</p>
+            </div>
+        </section>
+
+        <!-- Register Interest -->
+        <section id="register">
+            <div class="container">
+                <h2>Register Your Interest</h2>
+                <p>We are preparing our first programmes. Register your interest to be notified when we launch.</p>
+
+                <!--
+                    FORM BACKEND NOTE:
+                    This form currently points to a Formspree placeholder endpoint.
+                    To activate it:
+                    1. Create an account at https://formspree.io
+                    2. Create a new form and copy the endpoint URL
+                    3. Replace "https://formspree.io/f/xplaceholder" below with your real endpoint
+
+                    Alternatively, replace the action with "mailto:info@theamblerinstitute.org"
+                    and set method="POST" enctype="text/plain" for a simple email fallback.
+                -->
+                <form class="register-form" action="https://formspree.io/f/xplaceholder" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="organisation">Organisation <span class="optional">(optional)</span></label>
+                        <input type="text" id="organisation" name="organisation" autocomplete="organization">
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I consent to The Ambler Institute storing my details to contact me about upcoming programmes. We will not share your information with third parties. You can withdraw consent at any time by emailing us.</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Register Interest</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>The Ambler Institute for Ethical AI&ensp;|&ensp;Community Interest Company (incorporating)</p>
+            <p class="footer-contact">Contact: <a href="mailto:info@theamblerinstitute.org">info@theamblerinstitute.org</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
