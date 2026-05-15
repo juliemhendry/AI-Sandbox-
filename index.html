@@ -44,9 +44,9 @@
         body {
             font-family: 'Source Sans 3', 'Source Sans Pro', arial, sans-serif;
             color: rgba(255, 255, 255, 0.85);
-            background: #000000;
+            background: #111111;
             line-height: 1.7;
-            font-size: 16px;
+            font-size: 17px;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -55,22 +55,22 @@
         }
 
         .container {
-            max-width: 720px;
+            max-width: 760px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 28px;
         }
 
         /* ─── Hero ─── */
         .hero {
             position: relative;
-            height: 100vh;
-            min-height: 560px;
+            min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: #161616;
+            background: #1a1a1a;
             overflow: hidden;
         }
 
@@ -79,108 +79,88 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             object-fit: cover;
-            opacity: 0.35;
+            opacity: 0.55;
         }
 
         .hero-overlay {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
-            padding: 40px 28px;
+            padding: 48px 32px;
         }
 
         .hero-title {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 35px;
-            letter-spacing: 4px;
+            font-size: 38px;
+            letter-spacing: 5px;
             text-transform: uppercase;
             color: #ffffff;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             line-height: 1.2;
         }
 
         .hero-tagline {
             font-family: 'Playfair Display', Georgia, serif;
             font-weight: 400;
-            font-size: 62px;
+            font-size: 64px;
             color: #ffffff;
-            line-height: 1.2;
+            line-height: 1.15;
         }
 
         .hero-sub {
             font-family: 'Source Sans 3', arial, sans-serif;
-            font-size: 14px;
-            color: rgba(255,255,255,0.5);
+            font-size: 15px;
+            color: rgba(255,255,255,0.6);
             letter-spacing: 1px;
-            margin-top: 40px;
+            margin-top: 48px;
         }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 26px; }
-            .hero-tagline { font-size: 44px; }
+            .hero-title { font-size: 28px; letter-spacing: 4px; }
+            .hero-tagline { font-size: 48px; }
         }
         @media (max-width: 480px) {
-            .hero-title { font-size: 18px; letter-spacing: 3px; }
-            .hero-tagline { font-size: 32px; }
+            .hero-title { font-size: 20px; letter-spacing: 3px; }
+            .hero-tagline { font-size: 36px; }
         }
 
         /* ─── Sections ─── */
         section {
-            padding: 56px 0;
-            background: #000000;
-        }
-
-        section.bg-dark {
-            background: #0d0d0d;
+            padding: 72px 0;
         }
 
         h2 {
             font-family: 'Playfair Display', Georgia, serif;
             font-weight: 400;
-            font-size: 44px;
-            color: rgb(150, 150, 150);
+            font-size: 40px;
+            color: rgba(255,255,255,0.6);
             text-align: center;
             margin-bottom: 12px;
             line-height: 1.3;
         }
 
         @media (max-width: 480px) {
-            h2 { font-size: 32px; }
+            h2 { font-size: 30px; }
         }
 
         .divider {
             width: 50px;
-            margin: 0 auto 40px;
+            margin: 0 auto 48px;
             border: none;
             border-top: 1px solid rgba(255,255,255,0.15);
         }
 
-        h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 14px;
-            margin-top: 40px;
-        }
-
-        h3:first-of-type {
-            margin-top: 0;
-        }
-
         p {
             margin-bottom: 16px;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 16px;
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 17px;
             font-weight: 300;
             line-height: 1.8;
         }
@@ -189,12 +169,20 @@
             margin-bottom: 0;
         }
 
+        .lead {
+            font-size: 20px;
+            text-align: center;
+            color: rgba(255,255,255,0.75);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         /* ─── Team ─── */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-bottom: 32px;
+            gap: 24px;
+            margin-bottom: 36px;
         }
 
         @media (max-width: 560px) {
@@ -203,22 +191,22 @@
 
         .team-member {
             text-align: center;
-            padding: 32px 16px 24px;
+            padding: 36px 16px 28px;
         }
 
         .team-photo {
-            width: 88px;
-            height: 88px;
+            width: 96px;
+            height: 96px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             filter: grayscale(20%);
         }
 
         .team-name {
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
             letter-spacing: 1px;
             color: #ffffff;
             text-decoration: none;
@@ -232,19 +220,19 @@
 
         .team-role {
             font-family: 'Source Sans 3', arial, sans-serif;
-            font-size: 13px;
-            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+            color: rgba(255,255,255,0.45);
             font-weight: 300;
         }
 
         .advisory-note {
             text-align: center;
             font-size: 14px;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.35);
         }
 
         .advisory-note a {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.45);
             text-decoration: underline;
             text-decoration-color: rgba(255,255,255,0.2);
         }
@@ -260,12 +248,13 @@
 
         .group-photo-wrap img {
             max-width: 100%;
+            border-radius: 4px;
         }
 
         .group-photo-wrap p {
             margin-top: 16px;
             font-size: 13px;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.35);
         }
 
         /* ─── Contact ─── */
@@ -275,14 +264,14 @@
 
         .contact-email {
             display: inline-block;
-            margin-top: 16px;
-            padding: 14px 36px;
+            margin-top: 20px;
+            padding: 16px 40px;
             background: #ffffff;
             color: #000000;
             text-decoration: none;
-            font-family: 'Source Sans 3', arial, sans-serif;
-            font-weight: 700;
-            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
             letter-spacing: 1px;
             border: none;
             transition: opacity 0.2s;
@@ -299,15 +288,46 @@
 
         /* ─── Footer ─── */
         footer {
-            padding: 40px 0;
+            padding: 48px 0;
             text-align: center;
-            background: #000000;
         }
 
         footer p {
             font-size: 13px;
-            color: rgba(255,255,255,0.35);
+            color: rgba(255,255,255,0.3);
             margin-bottom: 6px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: underline;
+            text-decoration-color: rgba(255,255,255,0.15);
+        }
+
+        footer a:hover {
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* ─── Privacy ─── */
+        .privacy-section p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.7;
+        }
+
+        .privacy-section a {
+            color: rgba(255,255,255,0.55);
+            text-decoration: underline;
+            text-decoration-color: rgba(255,255,255,0.2);
+        }
+
+        .privacy-section a:hover {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .privacy-section h2 {
+            font-size: 24px;
+            color: rgba(255,255,255,0.45);
         }
 
         /* ─── Utility ─── */
@@ -330,91 +350,19 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">The Ambler Institute</h1>
-            <p class="hero-tagline">Making AI work for humans</p>
-            <p class="hero-sub">Inaugural meeting, Worshipful Company of Information Technologists, London, 11 May 2026</p>
+            <p class="hero-tagline">Making AI work<br>for humans</p>
+            <p class="hero-sub">Operational AI governance, certification, and advisory</p>
         </div>
     </div>
 
     <main>
 
-        <!-- Mission -->
-        <section>
-            <div class="container">
-                <h2>Our Mission</h2>
-                <hr class="divider">
-                <p>Most organisations have an AI ethics statement. Very few have operational governance that holds up under scrutiny. With the EU AI Act entering enforcement in August 2026, the gap between good intentions and genuine compliance is about to become a regulatory, reputational, and financial risk.</p>
-                <p>The Ambler Institute exists to close that gap.</p>
-            </div>
-        </section>
-
-        <!-- What We Do -->
-        <section class="bg-dark">
-            <div class="container">
-                <h2>What We Do</h2>
-                <hr class="divider">
-
-                <h3>Advisory</h3>
-                <p>We help organisations move from AI ethics statements to operational governance. Our work starts with understanding where you actually are: how mature your AI governance is, where the gaps sit, and what needs to happen before enforcement. We work at board level because that is where accountability lives.</p>
-
-                <h3>Certification</h3>
-                <p>We are developing a certification framework grounded in the intersection of technology, psychology, and human behaviour. Built by practitioners who have implemented governance in real organisations, not theorists who have written about it from universities.</p>
-            </div>
-        </section>
-
-        <!-- The Concordat -->
-        <section>
-            <div class="container">
-                <h2>The Concordat</h2>
-                <hr class="divider">
-                <p>The Concordat for Ethical AI is the strategic advisory community that shaped the Institute's direction. Inaugurated on 11 May 2026 at the Worshipful Company of Information Technologists, it brings together leaders from technology, psychology, law, faith, education, and industry to ensure AI governance reflects the full complexity of human experience.</p>
-            </div>
-        </section>
-
-        <!-- Founding Team -->
-        <section class="bg-dark">
-            <div class="container">
-                <h2>The Board</h2>
-                <hr class="divider">
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="chris-ambler.jpeg" alt="Chris Ambler" class="team-photo" loading="lazy" width="400" height="400">
-                        <a href="https://www.linkedin.com/in/chrisambler60" target="_blank" rel="noopener" class="team-name">Chris Ambler FBCS</a>
-                        <span class="team-role">Founder and Chief Executive Officer</span>
-                    </div>
-                    <div class="team-member">
-                        <img src="julie-hendry.jpeg" alt="Julie Hendry" class="team-photo" loading="lazy" width="400" height="400">
-                        <a href="https://www.linkedin.com/in/juliehendry" target="_blank" rel="noopener" class="team-name">Julie Hendry FBCS</a>
-                        <span class="team-role">Chief Operating Officer</span>
-                    </div>
-                    <div class="team-member">
-                        <img src="rob-newcombe.jpeg" alt="Rob Newcombe" class="team-photo" loading="lazy" width="400" height="400">
-                        <a href="https://www.linkedin.com/in/rob-newcombe-fbcs-ftag-rittech-1a52959" target="_blank" rel="noopener" class="team-name">Rob Newcombe FBCS</a>
-                        <span class="team-role">Chief Information and Product Officer</span>
-                    </div>
-                    <div class="team-member">
-                        <img src="noel-phillips.jpeg" alt="Rev Dr Noel Phillips" class="team-photo" loading="lazy" width="400" height="400">
-                        <a href="https://www.linkedin.com/in/revd-dr-noel-phillips-a9795841" target="_blank" rel="noopener" class="team-name">Rev Dr Noel Phillips</a>
-                        <span class="team-role">Chief People Officer</span>
-                    </div>
-                </div>
-                <p class="advisory-note">Advisory support from the <a href="https://www.tortorabrayda.org" target="_blank" rel="noopener">Tortora Brayda Institute</a>.</p>
-            </div>
-        </section>
-
-        <!-- Group photo -->
-        <section>
-            <div class="container group-photo-wrap">
-                <img src="inaugural-group.jpeg" alt="Delegates at the inaugural meeting of The Ambler Institute, WCIT Hall, 11 May 2026" loading="lazy" width="740" height="600">
-                <p>Inaugural delegates, WCIT Hall, London</p>
-            </div>
-        </section>
-
         <!-- Contact -->
-        <section class="bg-dark">
+        <section>
             <div class="container contact-cta">
                 <h2>Get in Touch</h2>
                 <hr class="divider">
-                <p>We are building our first advisory and certification programmes. If your organisation is navigating AI governance, we would welcome a conversation.</p>
+                <p class="lead">We would welcome a conversation.</p>
                 <a href="mailto:info@theamblerinstitute.org" class="contact-email">info@theamblerinstitute.org</a>
             </div>
         </section>
@@ -422,13 +370,13 @@
     </main>
 
     <!-- Privacy Notice -->
-    <section id="privacy">
+    <section id="privacy" class="privacy-section" style="padding-top: 24px;">
         <div class="container">
-            <h2 style="font-size: 28px;">Privacy Notice</h2>
+            <h2>Privacy Notice</h2>
             <hr class="divider">
             <p>This website is a static site hosted on GitHub Pages. It does not use cookies, tracking pixels, analytics, or any form of data collection. All fonts are self-hosted; no requests are made to third-party services when you visit this site.</p>
-            <p>If you contact us by email, we will use your information only to respond to your enquiry. We will not share your details with third parties. You may request deletion of your data at any time by emailing <a href="mailto:info@theamblerinstitute.org" style="color: rgba(255,255,255,0.7); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3);">info@theamblerinstitute.org</a>.</p>
-            <p>GitHub Pages may collect basic server logs (IP addresses, browser type) as part of its hosting infrastructure. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.7); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3);">GitHub's privacy statement</a> for details.</p>
+            <p>If you contact us by email, we will use your information only to respond to your enquiry. We will not share your details with third parties. You may request deletion of your data at any time by emailing <a href="mailto:info@theamblerinstitute.org">info@theamblerinstitute.org</a>.</p>
+            <p>GitHub Pages may collect basic server logs (IP addresses, browser type) as part of its hosting infrastructure. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's privacy statement</a> for details.</p>
             <p>The Ambler Institute for Ethical AI is a Community Interest Company (incorporating) registered in England and Wales.</p>
         </div>
     </section>
@@ -438,7 +386,7 @@
         <div class="container">
             <p>&copy; 2026 The Ambler Institute for Ethical AI</p>
             <p>Community Interest Company (incorporating)</p>
-            <p>This website does not use cookies or collect personal data. <a href="#privacy" style="color: rgba(255,255,255,0.5); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.2);">Privacy notice</a>.</p>
+            <p>This website does not use cookies or collect personal data. <a href="#privacy">Privacy notice</a>.</p>
         </div>
     </footer>
 
